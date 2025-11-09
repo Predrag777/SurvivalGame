@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 00000000000000000000000000000000
+  productGUID: 95b980a00306f0520ac067a34c1b3660
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -660,7 +660,7 @@ PlayerSettings:
     iPhone: CROSS_PLATFORM_INPUT;MOBILE_INPUT
   additionalCompilerArguments: {}
   platformArchitecture:
-    iPhone: 0
+    iPhone: 1
   scriptingBackend:
     Android: 1
     Standalone: 0
@@ -792,7 +792,7 @@ PlayerSettings:
   cloudProjectId: c9ff9550-c342-4a43-8360-a1b7bc522e16
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Zombie Toys Chapter 01-03
+  projectName: Survival
   organizationId: predragbrajoviccw
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
