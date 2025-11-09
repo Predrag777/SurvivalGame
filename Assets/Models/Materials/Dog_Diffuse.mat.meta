@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 425073406d7db7f42960060313e45031
+timeCreated: 1439015073
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56274
+  packageName: Chapter 01 - 03 / Zombie Toys
+  packageVersion: 5.3.4.r1
+  assetPath: Assets/Models/Materials/Dog_Diffuse.mat
+  uploadId: 288140

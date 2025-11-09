@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1e47e7ec6ccc971489966aaa5093fc9e
+timeCreated: 1439015372
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56274
+  packageName: Chapter 01 - 03 / Zombie Toys
+  packageVersion: 5.3.4.r1
+  assetPath: Assets/Models/Materials/blinn2.mat
+  uploadId: 288140

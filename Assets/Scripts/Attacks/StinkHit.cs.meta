@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6729d5a9c7d22224b8883d621607dd48
+timeCreated: 1454433777
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56274
+  packageName: Chapter 01 - 03 / Zombie Toys
+  packageVersion: 5.3.4.r1
+  assetPath: Assets/Scripts/Attacks/StinkHit.cs
+  uploadId: 288140

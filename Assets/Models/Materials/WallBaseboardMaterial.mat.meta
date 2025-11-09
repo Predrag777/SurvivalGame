@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 97bee53cb99464f49ba3e896ff3bff87
+timeCreated: 1452799628
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56274
+  packageName: Chapter 01 - 03 / Zombie Toys
+  packageVersion: 5.3.4.r1
+  assetPath: Assets/Models/Materials/WallBaseboardMaterial.mat
+  uploadId: 288140

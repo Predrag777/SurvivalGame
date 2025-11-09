@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 7064fa5724d3f3240aa2f63a72723245
+timeCreated: 1454388701
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56274
+  packageName: Chapter 01 - 03 / Zombie Toys
+  packageVersion: 5.3.4.r1
+  assetPath: Assets/Scripts/Managers/AllyManager.cs
+  uploadId: 288140

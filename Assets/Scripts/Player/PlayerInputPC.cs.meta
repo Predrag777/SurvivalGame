@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6facc5dfb546f40fca6805ab50138530
+timeCreated: 1435591554
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56274
+  packageName: Chapter 01 - 03 / Zombie Toys
+  packageVersion: 5.3.4.r1
+  assetPath: Assets/Scripts/Player/PlayerInputPC.cs
+  uploadId: 288140

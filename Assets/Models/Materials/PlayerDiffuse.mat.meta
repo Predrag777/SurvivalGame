@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: da03c3152c4303d4181bd7bed1035331
+timeCreated: 1431180616
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56274
+  packageName: Chapter 01 - 03 / Zombie Toys
+  packageVersion: 5.3.4.r1
+  assetPath: Assets/Models/Materials/PlayerDiffuse.mat
+  uploadId: 288140

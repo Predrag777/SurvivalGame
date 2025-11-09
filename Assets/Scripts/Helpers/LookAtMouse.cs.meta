@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d2e4cfa7a75cd4ec6904a2fdbac07633
+timeCreated: 1429693614
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56274
+  packageName: Chapter 01 - 03 / Zombie Toys
+  packageVersion: 5.3.4.r1
+  assetPath: Assets/Scripts/Helpers/LookAtMouse.cs
+  uploadId: 288140
