@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Dog : MonoBehaviour
 {
-    private float speed = 5.0f;
+    private float speed = 2.0f;
     private Animator animator;
     private bool isMoving = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,15 +17,16 @@ public class Dog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isMoving)
+        if (!isMoving)
         {
+            isMoving = true;
             StartCoroutine(performMove());
         }
     }
 
     IEnumerator performMove()
     {
-        float moveDuration = 2.0f; 
+        float moveDuration = 5.0f; 
         float elapsedTime = 0.0f;
 
         while (elapsedTime < moveDuration)
@@ -33,13 +34,14 @@ public class Dog : MonoBehaviour
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
             elapsedTime += Time.deltaTime;
             animator.SetBool("move", true);
-            Debug.Log("Dog is moving");
             yield return null;
         }       
 
         animator.SetBool("move", false);
         transform.Rotate(0, 180, 0);
+
         yield return new WaitForSeconds(3.0f);
+        isMoving = false;
     }
     
 
