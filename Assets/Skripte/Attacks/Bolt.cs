@@ -44,21 +44,21 @@ public class Bolt : MonoBehaviour
     {
         phaseIndex++;
 
-        if(phaseIndex>=rayPhases.Length) phaseIndex=0;
+        if(phaseIndex >= rayPhases.Length) 
+            phaseIndex = 0;
 
-        AnimationCurve curve=rayPhases[phaseIndex];
+        AnimationCurve curve = rayPhases[phaseIndex];
 
-        rayRenderer.positionCount=curve.keys.Length;
+        rayRenderer.positionCount = curve.keys.Length;
 
         for(int i = 0; i < curve.keys.Length; i++)
         {
-            Keyframe key=curve.keys[i];
+            Keyframe key = curve.keys[i];
 
-            Vector3 newPoint=transform.position+vectorOfBolt*key.time;
-
-            endPoint+=Vector3.up*key.value*rayHeight;
-
+            Vector3 newPoint = transform.position + vectorOfBolt * key.time;
+            newPoint += Vector3.up * key.value * rayHeight;  // podiže samo tačku
             rayRenderer.SetPosition(i, newPoint);
         }
     }
+
 }

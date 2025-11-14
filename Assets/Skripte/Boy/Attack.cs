@@ -4,6 +4,7 @@ public class Attack : MonoBehaviour
 {
     [Header("Attack")]
     [SerializeField] ParticleSystem explosion;
+    [SerializeField] ParticleSystem light;
     [SerializeField] int numberOfAttacks;
     float range = 200f;
     [SerializeField] LayerMask strikeableMask;
@@ -16,10 +17,15 @@ public class Attack : MonoBehaviour
     float timeOfLastAttack = 0f;
     bool canAttack = true;
 
+    [SerializeField] Bolt lightningPrefab; 
+    Transform firePoint;
+
+
     Camera mainCam;
 
     void Start()
     {
+        firePoint=gameObject.transform;
         source=GetComponent<AudioSource>();
         mainCam = Camera.main;
     }
@@ -28,6 +34,8 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            light.gameObject.SetActive(true);
+            light.Play();
             Fire();
         }
     }
@@ -42,6 +50,12 @@ public class Attack : MonoBehaviour
         if (Physics.Raycast(ray, out hit, range))
         {
             Debug.Log("Pogadjam");
+
+            lightningPrefab.transform.position = firePoint.position; 
+            lightningPrefab.endPoint = hit.point; 
+            lightningPrefab.gameObject.SetActive(true); 
+
+
             explosion.transform.position = hit.point;
             
             explosion.transform.rotation = Quaternion.LookRotation(hit.normal);
