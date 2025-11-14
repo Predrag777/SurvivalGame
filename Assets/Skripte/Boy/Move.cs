@@ -5,9 +5,12 @@ public class Move : MonoBehaviour
     [SerializeField] private float speed = 5f;
 
     Animator animator;
+    CharacterController agent;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        agent=GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }
 
@@ -25,7 +28,10 @@ public class Move : MonoBehaviour
 
         Vector3 move = new Vector3(horizontal, 0f, vertical);
         animator.SetBool("move", move != Vector3.zero);
-        transform.Translate(move * speed * Time.deltaTime);
+
+        Vector3 step=transform.TransformDirection(move);
+        //transform.Translate(move * speed * Time.deltaTime);
+        agent.Move(step*speed*Time.deltaTime);
     }
     
     void performRotation()

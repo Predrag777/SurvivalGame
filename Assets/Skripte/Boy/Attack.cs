@@ -7,6 +7,8 @@ public class Attack : MonoBehaviour
     [SerializeField] int numberOfAttacks;
     float range = 200f;
     [SerializeField] LayerMask strikeableMask;
+    AudioSource source;
+    [SerializeField] AudioClip boltClip;
 
     [Header("UI")]
     int attackIndex = 0;
@@ -18,6 +20,7 @@ public class Attack : MonoBehaviour
 
     void Start()
     {
+        source=GetComponent<AudioSource>();
         mainCam = Camera.main;
     }
 
@@ -42,7 +45,8 @@ public class Attack : MonoBehaviour
             explosion.transform.position = hit.point;
             
             explosion.transform.rotation = Quaternion.LookRotation(hit.normal);
-
+            source.clip=boltClip;
+            source.Play();
             explosion.Play();
             timeOfLastAttack = Time.time;
         }
