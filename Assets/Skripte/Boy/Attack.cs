@@ -46,10 +46,9 @@ public class Attack : MonoBehaviour
         // Ray iz kamere do pozicije miša
         Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        Debug.Log("Shoot");
         if (Physics.Raycast(ray, out hit, range))
         {
-            Debug.Log("Pogadjam");
+            
 
             lightningPrefab.transform.position = firePoint.position; 
             lightningPrefab.endPoint = hit.point; 
@@ -63,6 +62,13 @@ public class Attack : MonoBehaviour
             source.Play();
             explosion.Play();
             timeOfLastAttack = Time.time;
+
+            if (hit.collider.CompareTag("Enemy"))
+            {
+                Debug.Log("Pogadjam");
+                Enemy enemy=hit.collider.GetComponent<Enemy>();
+                enemy.health-=20;
+            }
         }
     }
 
