@@ -5,6 +5,7 @@ public class CameraFollow2 : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float distance=3f;
     [SerializeField] float height=3f;
+    [SerializeField] float shift=-6;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +20,6 @@ public class CameraFollow2 : MonoBehaviour
 
     void Follow()
     {
-        transform.position=target.position-new Vector3(0f, height, distance);
+        transform.position=target.position-new Vector3(shift, height, distance);
     }
 }
