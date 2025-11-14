@@ -498,6 +498,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: lightHit
       objectReference: {fileID: 0}
+    - target: {fileID: 234498761876955841, guid: 1a0219bb9fb795afdaec7c871e812e69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3759118429633804929, guid: 1a0219bb9fb795afdaec7c871e812e69,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -547,6 +552,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6236323769620887971, guid: 1a0219bb9fb795afdaec7c871e812e69,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0.024998447
+      objectReference: {fileID: 0}
+    - target: {fileID: 6236323769620887971, guid: 1a0219bb9fb795afdaec7c871e812e69,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 0.503403
+      objectReference: {fileID: 0}
+    - target: {fileID: 6236323769620887971, guid: 1a0219bb9fb795afdaec7c871e812e69,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.60065025
+      objectReference: {fileID: 0}
+    - target: {fileID: 6236323769620887971, guid: 1a0219bb9fb795afdaec7c871e812e69,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0.30010498
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -615,6 +640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lighting Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7794065392514709735, guid: 48552d4df40239dd1bd05f2059343d24,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

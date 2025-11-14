@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3759118429633804929
 Transform:
   m_ObjectHideFlags: 0
@@ -4958,7 +4958,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 376812733e617eb8199b8c0783e3eee6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4989,8 +4989,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.016232228
-        value: 0.6162138
+        time: 0
+        value: 0.6002549
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -4998,8 +4998,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.4994143
-        value: 0.47699255
+        time: 1
+        value: 0.30860102
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -5065,7 +5065,7 @@ MonoBehaviour:
   endPoint: {x: 0, y: 0, z: 0}
   rayHeight: 2
   effectDuration: 0.75
-  phaseDuration: 0.1
+  phaseDuration: 0.01
   rayRenderer: {fileID: 6236323769620887971}
   rayPhases:
   - serializedVersion: 2
