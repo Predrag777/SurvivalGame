@@ -4,12 +4,15 @@ public class Move : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
 
+    Player player;
+
     Animator animator;
     CharacterController agent;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        player=GetComponent<Player>();
         agent=GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }
@@ -17,6 +20,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player.health<=0f) return;
         performMove();
         performRotation();
     }

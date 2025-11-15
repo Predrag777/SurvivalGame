@@ -6,9 +6,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] float speed=2f;
     [SerializeField] float damage=10f;
     [SerializeField] public float health= 10f;
-    
+    [SerializeField] private AudioClip deathClip;
+    [SerializeField] private AudioClip hurtClip;
 
+    
+    private bool log=false;
     Animator animator;
+    AudioSource source;
     NavMeshAgent agent;
     Transform player;
     GameObject target;
@@ -20,6 +24,7 @@ public class Enemy : MonoBehaviour
 
         animator=GetComponent<Animator>();
         player=gameObject.transform;
+        source=GetComponent<AudioSource>();
 
         agent=GetComponent<NavMeshAgent>();
     }
@@ -31,6 +36,10 @@ public class Enemy : MonoBehaviour
         {
             agent.isStopped = true;
             agent.velocity = Vector3.zero;
+            source.clip=deathClip;
+            if(!source.isPlaying && !log){
+                log=true;
+                source.Play();}
             StartCoroutine(deathSequence());
             
             return;
@@ -42,7 +51,6 @@ public class Enemy : MonoBehaviour
 
     void Move()
     {
-        
         agent.SetDestination(target.transform.position);
         animator.SetBool("move", target != null);
     }
@@ -52,6 +60,20 @@ public class Enemy : MonoBehaviour
         animator.Play("Death");
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            
+        }
+    }
+
+    public void playerIsHurt()
+    {
+        source.clip=hurtClip;
+        source.Play();
     }
 
 }

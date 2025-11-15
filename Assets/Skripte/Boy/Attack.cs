@@ -28,6 +28,10 @@ public class Attack : MonoBehaviour
         firePoint=gameObject.transform;
         source=GetComponent<AudioSource>();
         mainCam = Camera.main;
+
+        explosion.gameObject.SetActive(false);
+        light.gameObject.SetActive(false);
+
     }
 
     void Update()
@@ -48,13 +52,14 @@ public class Attack : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, range))
         {
-            
+            light.gameObject.SetActive(true);
 
             lightningPrefab.transform.position = firePoint.position; 
             lightningPrefab.endPoint = hit.point; 
             lightningPrefab.gameObject.SetActive(true); 
 
 
+            explosion.gameObject.SetActive(true);
             explosion.transform.position = hit.point;
             
             explosion.transform.rotation = Quaternion.LookRotation(hit.normal);
@@ -67,7 +72,11 @@ public class Attack : MonoBehaviour
             {
                 Debug.Log("Pogadjam");
                 Enemy enemy=hit.collider.GetComponent<Enemy>();
-                enemy.health-=20;
+                enemy.health-=2;
+                if (enemy.health > 0f)
+                {
+                    enemy.playerIsHurt();
+                }
             }
         }
     }
