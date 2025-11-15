@@ -52,15 +52,29 @@ public class Attack : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, range))
         {
+            Vector3 targetPoint = hit.point;
+
+            Vector3 direction=(targetPoint-firePoint.position).normalized;
+            float distance = Vector3.Distance(firePoint.position, targetPoint);
+
+            RaycastHit trueHit;
+            Vector3 finalHitPoint=targetPoint;
+
+            if(Physics.Raycast(firePoint.position, direction, out trueHit, distance))
+            {
+                finalHitPoint=trueHit.point;
+            }
+
+
             light.gameObject.SetActive(true);
 
             lightningPrefab.transform.position = firePoint.position; 
-            lightningPrefab.endPoint = hit.point; 
+            lightningPrefab.endPoint = finalHitPoint;
             lightningPrefab.gameObject.SetActive(true); 
 
 
             explosion.gameObject.SetActive(true);
-            explosion.transform.position = hit.point;
+            explosion.transform.position = finalHitPoint;
             
             explosion.transform.rotation = Quaternion.LookRotation(hit.normal);
             source.clip=boltClip;

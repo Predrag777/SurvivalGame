@@ -26,19 +26,30 @@ public class Bolt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeSinceEffectStarted+=Time.deltaTime;
-        if(timeSinceEffectStarted>=effectDuration)
+        timeSinceEffectStarted += Time.deltaTime;
+
+        if (timeSinceEffectStarted >= effectDuration)
             gameObject.SetActive(false);
-        vectorOfBolt=endPoint-transform.position;
+
+        Vector3 dir = endPoint - transform.position;
+        float dist = dir.magnitude;
+
+        // Provjera prepreke
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, dir.normalized, out hit, dist))
+        {
+            endPoint = hit.point;
+        }
+
+        vectorOfBolt = endPoint - transform.position;
 
         if (timeSinceEffectStarted >= timeToChangePhase)
         {
-            timeToChangePhase=timeSinceEffectStarted+phaseDuration;
-
+            timeToChangePhase = timeSinceEffectStarted + phaseDuration;
             ChangePhase();
         }
-
     }
+
 
     void ChangePhase()
     {
