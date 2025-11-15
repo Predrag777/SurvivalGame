@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private AudioClip deathClip;
     [SerializeField] private AudioClip hurtClip;
 
+    UIController ui;
+
     
     private bool log=false;
     Animator animator;
@@ -20,6 +22,7 @@ public class Enemy : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        ui=GameObject.Find("Canvas").GetComponent<UIController>();
         target=GameObject.FindGameObjectWithTag("Player");
 
         animator=GetComponent<Animator>();
@@ -59,6 +62,7 @@ public class Enemy : MonoBehaviour
     {
         animator.Play("Death");
         yield return new WaitForSeconds(3f);
+        ui.addKill();
         Destroy(gameObject);
     }
 

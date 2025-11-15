@@ -7,7 +7,6 @@ public class Attack : MonoBehaviour
     [SerializeField] ParticleSystem light;
     [SerializeField] int numberOfAttacks;
     float range = 200f;
-    [SerializeField] LayerMask strikeableMask;
     AudioSource source;
     [SerializeField] AudioClip boltClip;
 
@@ -18,14 +17,14 @@ public class Attack : MonoBehaviour
     bool canAttack = true;
 
     [SerializeField] Bolt lightningPrefab; 
-    Transform firePoint;
+    [SerializeField] Transform firePoint;
 
 
     Camera mainCam;
 
     void Start()
     {
-        firePoint=gameObject.transform;
+        //firePoint=gameObject.transform;
         source=GetComponent<AudioSource>();
         mainCam = Camera.main;
 

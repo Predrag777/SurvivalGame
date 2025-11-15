@@ -11,7 +11,6 @@ public class Bolt : MonoBehaviour
     [Header("Bolt rendering")]
     [SerializeField] LineRenderer rayRenderer;
     [SerializeField] AnimationCurve[] rayPhases;
-    [SerializeField] UIController ui;
 
     int phaseIndex=0;
     float timeToChangePhase;
@@ -49,10 +48,7 @@ public class Bolt : MonoBehaviour
                 {
                     enemy.playerIsHurt();
                 }
-                else
-                {
-                    ui.addKill();
-                }
+
             }
         }
 
