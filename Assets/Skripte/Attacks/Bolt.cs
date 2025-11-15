@@ -11,6 +11,7 @@ public class Bolt : MonoBehaviour
     [Header("Bolt rendering")]
     [SerializeField] LineRenderer rayRenderer;
     [SerializeField] AnimationCurve[] rayPhases;
+    [SerializeField] UIController ui;
 
     int phaseIndex=0;
     float timeToChangePhase;
@@ -48,6 +49,10 @@ public class Bolt : MonoBehaviour
                 {
                     enemy.playerIsHurt();
                 }
+                else
+                {
+                    ui.addKill();
+                }
             }
         }
 
@@ -77,7 +82,7 @@ public class Bolt : MonoBehaviour
             Keyframe key = curve.keys[i];
 
             Vector3 newPoint = transform.position + vectorOfBolt * key.time;
-            newPoint += Vector3.up * key.value * rayHeight;  // podiže samo tačku
+            newPoint += Vector3.up * key.value * rayHeight; 
             rayRenderer.SetPosition(i, newPoint);
         }
     }
