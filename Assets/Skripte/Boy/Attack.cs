@@ -82,16 +82,7 @@ public class Attack : MonoBehaviour
             explosion.Play();
             timeOfLastAttack = Time.time;
 
-            if (hit.collider.CompareTag("Enemy"))
-            {
-                Debug.Log("Pogadjam");
-                Enemy enemy=hit.collider.GetComponent<Enemy>();
-                enemy.health-=2;
-                if (enemy.health > 0f)
-                {
-                    enemy.playerIsHurt();
-                }
-            }
+            
         }
     }
 

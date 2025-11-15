@@ -39,6 +39,16 @@ public class Bolt : MonoBehaviour
         if (Physics.Raycast(transform.position, dir.normalized, out hit, dist))
         {
             endPoint = hit.point;
+            if (hit.collider.CompareTag("Enemy"))
+            {
+                Debug.Log("Pogadjam");
+                Enemy enemy=hit.collider.GetComponent<Enemy>();
+                enemy.health-=2;
+                if (enemy.health > 0f)
+                {
+                    enemy.playerIsHurt();
+                }
+            }
         }
 
         vectorOfBolt = endPoint - transform.position;
